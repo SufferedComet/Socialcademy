@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1D4C83AE2A4D3D6500CEA9C8 /* SocialcademyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4C83AD2A4D3D6500CEA9C8 /* SocialcademyApp.swift */; };
-		1D4C83B02A4D3D6500CEA9C8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4C83AF2A4D3D6500CEA9C8 /* ContentView.swift */; };
 		1D4C83B22A4D3D6600CEA9C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D4C83B12A4D3D6600CEA9C8 /* Assets.xcassets */; };
 		1D4C83BC2A4D3E3500CEA9C8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D4C83BB2A4D3E3500CEA9C8 /* GoogleService-Info.plist */; };
 		1D4C83BF2A4D3F3400CEA9C8 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 1D4C83BE2A4D3F3400CEA9C8 /* FirebaseAnalytics */; };
@@ -16,16 +15,19 @@
 		1D4C83C32A4D3F3400CEA9C8 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1D4C83C22A4D3F3400CEA9C8 /* FirebaseFirestoreSwift */; };
 		1D83AE752A4D452A00F04AD1 /* Preview Content in Resources */ = {isa = PBXBuildFile; fileRef = 1D83AE742A4D452A00F04AD1 /* Preview Content */; };
 		1D83AE772A4D458D00F04AD1 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D83AE762A4D458D00F04AD1 /* Post.swift */; };
+		1D83AE792A4D464100F04AD1 /* PostsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D83AE782A4D464100F04AD1 /* PostsList.swift */; };
+		1D83AE7B2A4D481400F04AD1 /* PostRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D83AE7A2A4D481400F04AD1 /* PostRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1D4C83AA2A4D3D6500CEA9C8 /* Socialcademy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Socialcademy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D4C83AD2A4D3D6500CEA9C8 /* SocialcademyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialcademyApp.swift; sourceTree = "<group>"; };
-		1D4C83AF2A4D3D6500CEA9C8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1D4C83B12A4D3D6600CEA9C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D4C83BB2A4D3E3500CEA9C8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1D83AE742A4D452A00F04AD1 /* Preview Content */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Preview Content"; sourceTree = "<group>"; };
 		1D83AE762A4D458D00F04AD1 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		1D83AE782A4D464100F04AD1 /* PostsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsList.swift; sourceTree = "<group>"; };
+		1D83AE7A2A4D481400F04AD1 /* PostRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +90,8 @@
 		1D67B02A2A4D436400C4EE7F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1D4C83AF2A4D3D6500CEA9C8 /* ContentView.swift */,
+				1D83AE782A4D464100F04AD1 /* PostsList.swift */,
+				1D83AE7A2A4D481400F04AD1 /* PostRow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -183,8 +186,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D83AE772A4D458D00F04AD1 /* Post.swift in Sources */,
-				1D4C83B02A4D3D6500CEA9C8 /* ContentView.swift in Sources */,
 				1D4C83AE2A4D3D6500CEA9C8 /* SocialcademyApp.swift in Sources */,
+				1D83AE7B2A4D481400F04AD1 /* PostRow.swift in Sources */,
+				1D83AE792A4D464100F04AD1 /* PostsList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
