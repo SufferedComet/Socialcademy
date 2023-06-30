@@ -40,7 +40,29 @@ extension Loadable: Equatable where Value: Equatable {
         case let (.loaded(value1), .loaded(value2)):
             return value1 == value2
         default:
-            return true
+            return false
         }
     }
 }
+
+#if DEBUG
+extension Loadable {
+    static var error: Loadable<Value> { .error(PreviewError()) }
+    
+    private struct PreviewError: LocalizedError {
+        let errorDescription: String? = "Lorem ipsum dolor set amet."
+    }
+    
+    func simulate() async throws -> Value {
+        switch self {
+        case .loading:
+            try await Task.sleep(nanoseconds: 10 * 1_000_000_000)
+            fatalError("Timeout exceeded for loading case preview")
+        case .error(let error):
+            throw error
+        case .loaded(let value):
+            return value
+        }
+    }
+}
+#endif
