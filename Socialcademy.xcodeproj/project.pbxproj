@@ -20,6 +20,7 @@
 		1D83AE7F2A4E32B500F04AD1 /* NewPostForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D83AE7E2A4E32B500F04AD1 /* NewPostForm.swift */; };
 		1D83AE812A4E838F00F04AD1 /* PostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D83AE802A4E838F00F04AD1 /* PostsViewModel.swift */; };
 		1D83AE842A4E871100F04AD1 /* PostsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D83AE832A4E871100F04AD1 /* PostsRepository.swift */; };
+		1D83AE872A4E97AE00F04AD1 /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D83AE862A4E97AE00F04AD1 /* Loadable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		1D83AE7E2A4E32B500F04AD1 /* NewPostForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostForm.swift; sourceTree = "<group>"; };
 		1D83AE802A4E838F00F04AD1 /* PostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewModel.swift; sourceTree = "<group>"; };
 		1D83AE832A4E871100F04AD1 /* PostsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsRepository.swift; sourceTree = "<group>"; };
+		1D83AE862A4E97AE00F04AD1 /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 		1D4C83AC2A4D3D6500CEA9C8 /* Socialcademy */ = {
 			isa = PBXGroup;
 			children = (
+				1D83AE852A4E978700F04AD1 /* Utilities */,
 				1D83AE822A4E86CB00F04AD1 /* Repositories */,
 				1D67B02A2A4D436400C4EE7F /* Views */,
 				1D67B0292A4D435700C4EE7F /* ViewModels */,
@@ -121,6 +124,14 @@
 				1D83AE832A4E871100F04AD1 /* PostsRepository.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		1D83AE852A4E978700F04AD1 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				1D83AE862A4E97AE00F04AD1 /* Loadable.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +218,7 @@
 				1D83AE842A4E871100F04AD1 /* PostsRepository.swift in Sources */,
 				1D83AE812A4E838F00F04AD1 /* PostsViewModel.swift in Sources */,
 				1D83AE7B2A4D481400F04AD1 /* PostRow.swift in Sources */,
+				1D83AE872A4E97AE00F04AD1 /* Loadable.swift in Sources */,
 				1D83AE792A4D464100F04AD1 /* PostsList.swift in Sources */,
 				1D83AE7F2A4E32B500F04AD1 /* NewPostForm.swift in Sources */,
 			);
