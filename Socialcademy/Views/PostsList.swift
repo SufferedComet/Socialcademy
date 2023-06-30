@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct PostsList: View {
-    private var posts = [Post.testPost]
+    @StateObject var viewModel = PostsViewModel()
     
     @State private var searchText = ""
     @State private var showNewPostForm = false
     
     var body: some View {
         NavigationView {
-            List(posts) { post in
+            List(viewModel.posts) { post in
                 if searchText.isEmpty || post.contains(searchText) {
                     PostRow(post: post)
                 }
@@ -31,7 +31,7 @@ struct PostsList: View {
             }
         }
         .sheet(isPresented: $showNewPostForm) {
-            NewPostForm(createAction: { _ in })
+            NewPostForm(createAction: viewModel.makeCreateAction())
         }
     }
 }
