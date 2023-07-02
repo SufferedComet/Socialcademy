@@ -8,13 +8,12 @@
 import SwiftUI
 
 struct PostsList: View {
-    @StateObject var viewModel = PostsViewModel()
+    @StateObject var viewModel: PostsViewModel
     
     @State private var searchText = ""
     @State private var showNewPostForm = false
     
     var body: some View {
-        NavigationView {
             Group {
                 switch viewModel.posts {
                 case .loading:
@@ -26,16 +25,22 @@ struct PostsList: View {
                 case .empty:
                     EmptyListView(title: "No Posts", message: "There aren't any posts yet.")
                 case let .loaded(posts):
-                    List(posts) { post in
-                        if searchText.isEmpty || post.contains(searchText) {
-                            PostRow(viewModel: viewModel.makePostRowViewModel(for: post))
+                    ScrollView {
+                        ForEach(posts) { post in
+                            if searchText.isEmpty || post.contains(searchText) {
+                                PostRow(viewModel: viewModel.makePostRowViewModel(for: post))
+                            }
                         }
+                        .searchable(text: $searchText)
+                        .animation(.default, value: posts)
                     }
-                    .searchable(text: $searchText)
-                    .animation(.default, value: posts)
+                    
                 }
             }
             .navigationTitle(viewModel.title)
+            .onAppear {
+                viewModel.fetchPosts()
+            }
             .toolbar {
                 Button {
                     showNewPostForm = true
@@ -44,13 +49,8 @@ struct PostsList: View {
                 }
             }
             .sheet(isPresented: $showNewPostForm) {
-                NewPostForm(createAction: viewModel.makeCreateAction())
+                NewPostForm(viewModel: viewModel.makeNewPostViewModel())
             }
-        }
-        .onAppear {
-            viewModel.fetchPosts()
-        }
-        
     }
 }
 
@@ -70,7 +70,9 @@ struct PostsList_Previews: PreviewProvider {
         var body: some View {
             let postsRepository = PostsRepositoryStub(state: state)
             let viewModel = PostsViewModel(postsRepository: postsRepository)
-            PostsList(viewModel: viewModel)
+            NavigationView {
+                PostsList(viewModel: viewModel)
+            }
         }
     }
 }

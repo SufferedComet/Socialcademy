@@ -32,6 +32,8 @@
 		1D83AE9C2A50ED9000F04AD1 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D83AE9B2A50ED9000F04AD1 /* ProfileView.swift */; };
 		1D83AE9E2A50EE7000F04AD1 /* FormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D83AE9D2A50EE7000F04AD1 /* FormViewModel.swift */; };
 		1D83AEA02A510CDA00F04AD1 /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D83AE9F2A510CDA00F04AD1 /* PrimaryButtonStyle.swift */; };
+		1D83AEA22A51210D00F04AD1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D83AEA12A51210D00F04AD1 /* User.swift */; };
+		1D83AEA42A51258200F04AD1 /* ViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D83AEA32A51258200F04AD1 /* ViewModelFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +59,8 @@
 		1D83AE9B2A50ED9000F04AD1 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		1D83AE9D2A50EE7000F04AD1 /* FormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewModel.swift; sourceTree = "<group>"; };
 		1D83AE9F2A510CDA00F04AD1 /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
+		1D83AEA12A51210D00F04AD1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		1D83AEA32A51258200F04AD1 /* ViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				1D83AE762A4D458D00F04AD1 /* Post.swift */,
+				1D83AEA12A51210D00F04AD1 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -122,6 +127,7 @@
 				1D83AE8D2A4FEA7300F04AD1 /* PostRowViewModel.swift */,
 				1D83AE972A50EA4A00F04AD1 /* AuthViewModel.swift */,
 				1D83AE9D2A50EE7000F04AD1 /* FormViewModel.swift */,
+				1D83AEA32A51258200F04AD1 /* ViewModelFactory.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -283,11 +289,13 @@
 				1D83AE792A4D464100F04AD1 /* PostsList.swift in Sources */,
 				1D83AE8C2A4FC1CC00F04AD1 /* Alert+Error.swift in Sources */,
 				1D83AE982A50EA4A00F04AD1 /* AuthViewModel.swift in Sources */,
+				1D83AEA42A51258200F04AD1 /* ViewModelFactory.swift in Sources */,
 				1D83AE9A2A50EC3F00F04AD1 /* AuthView.swift in Sources */,
 				1D83AE7F2A4E32B500F04AD1 /* NewPostForm.swift in Sources */,
 				1D83AE9E2A50EE7000F04AD1 /* FormViewModel.swift in Sources */,
 				1D83AE8A2A4F45A100F04AD1 /* EmptyListView.swift in Sources */,
 				1D83AE902A50A2A100F04AD1 /* MainTabView.swift in Sources */,
+				1D83AEA22A51210D00F04AD1 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
