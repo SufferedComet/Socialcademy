@@ -35,6 +35,7 @@ private extension AuthView {
                     .textContentType(.name)
                     .textInputAutocapitalization(.words)
                 TextField("Email", text: $viewModel.email)
+                    .keyboardType(.emailAddress)
                     .textContentType(.emailAddress)
                     .textInputAutocapitalization(.never)
                 SecureField("Password", text: $viewModel.password)
@@ -47,6 +48,7 @@ private extension AuthView {
             }
             .onSubmit(viewModel.submit)
             .alert("Cannot Create Account", error: $viewModel.error)
+            .disabled(viewModel.isWorking)
         }
     }
     
@@ -57,7 +59,9 @@ private extension AuthView {
         var body: some View {
             Form {
                 TextField("Email", text: $viewModel.email)
+                    .keyboardType(.emailAddress)
                     .textContentType(.emailAddress)
+                    .textInputAutocapitalization(.never)
                 SecureField("Password", text: $viewModel.password)
                     .textContentType(.password)
             } footer: {
@@ -68,6 +72,7 @@ private extension AuthView {
             }
             .onSubmit(viewModel.submit)
             .alert("Cannot Sign In", error: $viewModel.error)
+            .disabled(viewModel.isWorking)
         }
     }
     
