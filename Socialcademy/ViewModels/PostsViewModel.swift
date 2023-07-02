@@ -77,7 +77,7 @@ class PostsViewModel: ObservableObject {
     
 }
 
-/*extension PostsRepositoryProtocol {
+private extension PostsRepositoryProtocol {
     func fetchPosts(matching filter: PostsViewModel.Filter) async throws -> [Post] {
         switch filter {
         case .all:
@@ -88,4 +88,4 @@ class PostsViewModel: ObservableObject {
             return try await fetchFavoritePosts()
         }
     }
-} */
+}

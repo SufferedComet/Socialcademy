@@ -19,16 +19,6 @@ class AuthViewModel: ObservableObject {
         authService.$user.assign(to: &$user)
     }
     
-    func signIn() {
-        Task {
-            do {
-                try await authService.signIn(email: email, password: password)
-            } catch {
-                print("[AuthViewModel] Cannot sign in: \(error)")
-            }
-        }
-    }
-    
     func makeSignInViewModel() -> SignInViewModel {
         return SignInViewModel(action: authService.signIn(email:password:))
     }
