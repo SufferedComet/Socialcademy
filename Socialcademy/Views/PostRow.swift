@@ -37,6 +37,9 @@ struct PostRow: View {
                     }
                 }
             }
+            .labelStyle(.iconOnly)
+            .buttonStyle(.borderless)
+            
         }
         .padding()
         .confirmationDialog("Are you sure you want to delete this post?", isPresented: $showConfirmationDialog, titleVisibility: .visible) {
