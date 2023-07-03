@@ -21,7 +21,8 @@ struct PostsList: View {
                 case let .error(error):
                     EmptyListView(title: "Cannot Load Posts", message: error.localizedDescription, retryAction: {
                         viewModel.fetchPosts()
-                    })
+                        }
+                    )
                 case .empty:
                     EmptyListView(title: "No Posts", message: "There aren't any posts yet.")
                 case let .loaded(posts):
@@ -41,6 +42,9 @@ struct PostsList: View {
             .onAppear {
                 viewModel.fetchPosts()
             }
+            .sheet(isPresented: $showNewPostForm) {
+                NewPostForm(viewModel: viewModel.makeNewPostViewModel())
+            }
             .toolbar {
                 Button {
                     showNewPostForm = true
@@ -48,9 +52,19 @@ struct PostsList: View {
                     Label("New Post", systemImage: "square.and.pencil")
                 }
             }
-            .sheet(isPresented: $showNewPostForm) {
-                NewPostForm(viewModel: viewModel.makeNewPostViewModel())
+            
+    }
+}
+
+extension PostsList {
+    struct RootView: View {
+        @StateObject var viewModel: PostsViewModel
+        
+        var body: some View {
+            NavigationView {
+                PostsList(viewModel: viewModel)
             }
+        }
     }
 }
 
@@ -72,6 +86,7 @@ struct PostsList_Previews: PreviewProvider {
             let viewModel = PostsViewModel(postsRepository: postsRepository)
             NavigationView {
                 PostsList(viewModel: viewModel)
+                    .environmentObject(ViewModelFactory.preview)
             }
         }
     }

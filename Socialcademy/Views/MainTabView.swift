@@ -14,10 +14,10 @@ struct MainTabView: View {
         TabView {
             NavigationView {
                 PostsList(viewModel: factory.makePostsViewModel())
-                }
+            }
             .tabItem {
                 Label("Posts", systemImage: "list.dash")
-            }
+        }
             NavigationView {
                 PostsList(viewModel: factory.makePostsViewModel(filter: .favorites))
             }
