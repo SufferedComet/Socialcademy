@@ -82,6 +82,7 @@
 		1D83AEB32A5264D000F04AD1 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		1D83AEB92A527F2200F04AD1 /* StorageFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageFile.swift; sourceTree = "<group>"; };
 		1D83AEBB2A53AF5800F04AD1 /* ImagePickerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerButton.swift; sourceTree = "<group>"; };
+		1D83AEBD2A54A1D500F04AD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +121,7 @@
 		1D4C83AC2A4D3D6500CEA9C8 /* Socialcademy */ = {
 			isa = PBXGroup;
 			children = (
+				1D83AEBD2A54A1D500F04AD1 /* Info.plist */,
 				1D83AE942A50E7E200F04AD1 /* Services */,
 				1D83AE882A4F458B00F04AD1 /* SupportingViews */,
 				1D83AE852A4E978700F04AD1 /* Utilities */,
@@ -470,6 +472,8 @@
 				DEVELOPMENT_TEAM = JCQD5BHT7L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Socialcademy/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This lets you add photos to your posts and profile.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -503,6 +507,8 @@
 				DEVELOPMENT_TEAM = JCQD5BHT7L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Socialcademy/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This lets you add photos to your posts and profile.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -31,6 +31,13 @@ struct PostsRepository: PostsRepositoryProtocol {
     // MARK: - PR Functions
     // Uploads data to firestore database
      func create(_ post: Post) async throws {
+         var post = post
+         if let imageFileURL = post.imageURL {
+             post.imageURL = try await StorageFile
+                 .with(namespace: "posts", identifier: post.id.uuidString)
+                 .putFile(from: imageFileURL)
+                 .getDownloadURL()
+         }
         let document = postsReference.document(post.id.uuidString)
         try await document.setData(from: post)
     }
@@ -40,6 +47,8 @@ struct PostsRepository: PostsRepositoryProtocol {
         precondition(canDelete(post))
         let document = postsReference.document(post.id.uuidString)
         try await document.delete()
+        let image = post.imageURL.map(StorageFile.atURL(_:))
+        try await image?.delete()
     }
     // Toggles isFavorite boolean to true on the firestore database
     func favorite(_ post: Post) async throws {
