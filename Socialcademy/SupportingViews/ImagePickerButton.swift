@@ -23,7 +23,7 @@ struct ImagePickerButton<Label: View>: View {
         }
         .confirmationDialog("Choose Image", isPresented: $showImageSourceDialog) {
             Button("Choose from Library", action: {
-                sourceType = .photoLibrary //phpicker
+                sourceType = .photoLibrary // this code will be deprecated
             })
             Button("Take Photo", action: {
                 sourceType = .camera

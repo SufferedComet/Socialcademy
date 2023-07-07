@@ -11,12 +11,12 @@ import Foundation
 class ProfileViewModel: ObservableObject, StateManager {
     @Published var name: String
     @Published var isWorking = false
+    @Published var error: Error?
     @Published var imageURL: URL? {
         didSet {
             imageURLDidChange(from: oldValue)
         }
     }
-    @Published var error: Error?
     
     private let authService: AuthService
     
